@@ -349,7 +349,7 @@
     flex-direction: column;
     background: var(
         --splash-screen-background,
-        var(--preloader-background, var(--ruffle-blue))
+        var(--preloader-background, #06131e)
     );
     align-items: center;
     justify-content: center;
@@ -360,20 +360,32 @@
     max-width: 316px;
     max-height: 10px;
     height: 20%;
-    background: var(--ruffle-blue-dark);
+    overflow: hidden;
+    border-radius: 999px;
+    background: #102c3a;
+    box-shadow:
+        0 0 0 1px #4bdab233,
+        0 0 22px #18b7d233;
 }
 
 .loadbar-inner {
     width: 0;
     max-width: 100%;
     height: 100%;
-    background: var(--ruffle-orange);
+    background: linear-gradient(90deg, #26bde2, #68efac);
 }
 
 .logo {
     display: var(--logo-display, block);
     max-width: 380px;
     max-height: 150px;
+}
+
+.divinelabs-runtime-logo {
+    width: min(82%, 560px);
+    max-width: 560px;
+    max-height: 190px;
+    filter: drop-shadow(0 0 18px #26bde244);
 }
 
 .loading-animation {
@@ -387,7 +399,7 @@
 .spinner {
     stroke-dasharray: 180;
     stroke-dashoffset: 135;
-    stroke: var(--ruffle-orange);
+    stroke: #68efac;
     transform-origin: 50% 50%;
     animation: rotate 1.5s linear infinite;
 }
